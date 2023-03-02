@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="../Styles/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/Fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/background.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../Image/Test.ico" />
+
+    <script src="../Codes/javascript/jquery-3.4.1.min.js"></script>
+    <script src="../Codes/javascript/popper.min.js"></script>
+    <script src="../Codes/javascript/bootstrap.min.js"></script>
+
+    <title>Skyre Hospital</title>
+
+    <style>
+       
+        
+        .inline-block {
+            display: inline-block;
+        }
+        
+        .topnav {
+            overflow: hidden;
+            background-color: #e9e9e9;
+        }
+        
+        .topnav a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .topnav a.active {
+            background-color: #2196F3;
+            color: white;
+        }
+        
+        .topnav .login-container {
+            float: right;
+        }
+        
+        .topnav input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 17px;
+            border: none;
+            width: 120px;
+        }
+        
+        .topnav .login-container button {
+            float: right;
+            padding: 6px 10px;
+            margin-top: 8px;
+            margin-right: 16px;
+            background-color: #555;
+            color: white;
+            font-size: 17px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .topnav .login-container button:hover {
+            background-color: green;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav .login-container {
+                float: none;
+            }
+            .topnav a,
+            .topnav input[type=text],
+            .topnav .login-container button {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+            .topnav input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+        
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+
+</head>
+
+<body id="bg">
+
+    <nav class="navbar navbar-dark sticky-top">
+        <div class="container-fluid">
+
+            <ul class="nav navbar-nav">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Skyre Hospital</a>
+                </li>
+            </ul>
+
+            <ul class="nav nav-pills">
+
+                <li class="nav-item">
+                    <a class="nav-link"  href="aboutus.html">Login Demo</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link" data-toggle="modal" data-dismiss="modal" data-target="#darkModalForm">Sign Up</a>
+                    <div class="modal fade" id="darkModalForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+                        <div class="modal-dialog form-dark" role="document">
+
+                            <div class="modal-content card card-image" id="bg1">
+                                <div class="text-white rgba-stylish-strong py-5 px-5 z-depth-4">
+
+                                    <div class="modal-header text-center pb-4">
+                                        <h3 class="modal-title w-100 white-text font-weight-bold" id="myModalLabel"><strong style="">SIGN</strong> <a
+                                    class="green-text font-weight-bold"><strong> UP</strong></a></h3>
+                                        <button type="button" class="close white-text" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+
+                                    <div class="modal-body">
+
+                                        <div class="md-form mb-3">
+                                            <input type="email" class="form-control validate white-text" name= "" placeholder="username@gmail.com" required autofocus/>
+                                            <label>E-mail</label>
+                                        </div>
+
+                                        <div class="md-form mb-2">
+                                                <input type="text" class="form-control validate white-text" name= "" placeholder="" required autofocus/>
+                                                <label>Username</label>
+                                            </div>
+
+                                        <div class="md-form pb-3">
+                                            <input type="password" class="form-control validate white-text" minlength="5" maxlength="15" required/>
+                                            <label>Password</label>
+
+                                           
+
+                                                <div class="form-group mt-4">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="row d-flex align-items-center mb-4">
+
+                                                <div class="text-center mb-3 col-md-12">
+                                                    <button class="btn btn-success btn-block btn-rounded z-depth-1">Sign up</button>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                </li>
+
+                <div class="nav-item" style="padding-top: 3px; padding-left: 10px;">
+                    <form method="post">
+                        <input type="text" placeholder="Username" name="username">
+                        <input type="password" placeholder="Password" name="password">
+                        <input type="button" onclick="check(this.form)" value="Login" />
+                    </form>
+                </div>
+
+            </ul>
+    </nav>
+
+    <div id="banner">
+        <div class="inline-block">
+            <img src="../Image/Adminpic.png">
+        </div>
+
+        <div class="inline-block" style="padding-right: 500px;">
+            <img src="../Image/Patientpic.png">
+        </div>
+        <br>
+        <h4 style="padding-left: 110px;">Admin &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; User</h4>
+        <h4 style="padding-left: 20px;">Username: admin &emsp;&emsp;&emsp;&emsp;Username: user</h4>
+        <h4 style="padding-left: 20px;">Password: admin &emsp;&emsp;&emsp;&emsp;&nbsp;Password: user</h4>
+    </div>
+
+
+
+   
+
+    <footer class="footer">
+            <div class="container">
+                <span class="text-muted">Copyright © 2019, All Rights Reserved</span>
+            </div>
+        </footer>
+
+
+    <script>
+        function check(form) {
+            if (form.username.value == "admin" && form.password.value == "admin") {
+                window.open('admin_dashboard.html', "_self")
+            } else if (form.username.value == "user" && form.password.value == "user") {
+                window.open('user_dashboard.html', "_self")
+            } else {
+                alert("Incorrect Password or Username")
+            }
+        }
+
+     
+
+    </script>
+</body>
+
+</html>

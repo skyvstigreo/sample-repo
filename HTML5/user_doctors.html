@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../Styles/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/Fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/background.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/modal.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../Image/Test.ico" />
+
+    <script src="../Codes/javascript/jquery-3.4.1.min.js"></script>
+    <script src="../Codes/javascript/popper.min.js"></script>
+    <script src="../Codes/javascript/bootstrap.min.js"></script>
+
+    <title>User Dashboard</title>
+
+</head>
+
+<style>
+    .bodyimage3 {
+        background-image: url("../Image/6.jpg");
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding-top: 15px;
+    }
+    
+    #confirm {
+        display: none;
+        background-color: #F3F5F6;
+        color: #000000;
+        border: 1px solid #aaa;
+        position: fixed;
+        width: 300px;
+        height: 100px;
+        left: 50%;
+        margin-left: -100px;
+        padding: 10px 20px 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+    
+    #confirm button {
+        background-color: #FFFFFF;
+        display: inline-block;
+        border-radius: 12px;
+        border: 4px solid #aaa;
+        padding: 5px;
+        text-align: center;
+        width: 60px;
+        cursor: pointer;
+    }
+    
+    #confirm .message {
+        text-align: left;
+    }
+</style>
+
+</style>
+
+<body class="bodyimage3">
+
+    <div class="wrapper">
+
+        <nav id="sidebar" style="background-image:url('../Image/5.jpg') ">
+            <div class="sidebar-header" style="padding-left: 60px;">
+                <i class="far fa-hospital" style=" padding-left: 50px;"></i>
+                <h3 style="padding-left: 20px;">Skyre</h3>
+                <h3>Hospital</h3>
+            </div>
+
+            <ul class="list-group">
+                <li class="active">
+
+                    <a href="user_dashboard.html">
+                        <i class="fas fa-home-lg-alt"></i>
+                        <span> Dashboard</span>
+                    </a>
+
+                </li>
+                <li class="active">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-hospital-user"></i>
+                        <span> Patient</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="user_doctors.html" style="background-color: darkcyan"><i class="fas fa-user-md"></i><span> Doctors</span></a>
+                        </li>
+
+                        <li>
+                            <a href="user_patientinfo.html" style="background-color: darkcyan"><i class="fas fa-info"></i><span> Patient Information</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Navigation Section -->
+
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+                <div class="container-fluid">
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-user-md"></i>
+                                    <span>User</span>
+
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="user_patientinfo.html" onclick="return confirm('Are you sure to edit your information?');"><i class="fas fa-user-edit"></i><span> Edit Information</span></a>
+                                    <a class="dropdown-item" href="index.html" onclick="return confirm('Are you sure to logout?');"><i class="fas fa-sign-out"></i><span>  Logout</span></a>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div>
+
+            </div>
+
+            <!-- Main Section -->
+            <br>
+            <div class="container-fluid" style="margin-left: 10px; padding-left: 5px">
+
+                <div class="card">
+
+                    <div class="card-body col-form-label-sm" style="background-color: lightblue">
+                        <div class="card-header bg-light text-black-50">
+                            <i class="fas fa-edit"></i>
+                            <span class="text-info">Doctor Profile</span>
+
+                        </div>
+                        <br>
+
+                        <form>
+
+                            <div class="form-group">
+
+                                <div class="form-row">
+
+                                    <div class="col-sm-4">
+
+                                        <div class="input-group" style="padding-left: 20px">
+
+                                            <label class="col-form-label" style="padding-right: 20px">Department</label>
+
+                                            <select name="country" class="form-control">
+                                                <option>Select Department</option>
+                                                <option value="">Pediatrics</option>
+                                                <option value="">Psychiatrist</option>
+                                                <option value="">Neurology</option>
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-sm">
+
+                                        <div class="input-group">
+
+                                            <label class="col-form-label" style="padding-right: 5px">Doctor Name</label>
+
+                                            <select name="city" class="form-control" style="margin-left: 15px">
+                                                <option>Select Doctor</option>
+                                                <option value="">Doctor A</option>
+                                                <option value="">Doctor B</option>
+                                                <option value="">Doctor C</option>
+                                            </select>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </form>
+                        <div class="form-group" style="text-align: right">
+                            <button class="btn btn-success" data-toggle="collapse" data-target="#doctorprofile" aria-expanded="false">View Profile</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <br>
+
+            <div class="container-fluid collapse" id="doctorprofile" style="margin-left: 10px; padding-left: 5px">
+
+                <div class="card">
+
+                    <div class="card-body col-form-label-sm" style="background-color: lightblue">
+                        <div class="card-header bg-light text-black-50">
+
+                            <span class="text-info">Doctor Profile</span>
+
+                        </div>
+
+                        <div class="card w-50">
+
+                            <div class="card-body col-form-label-sm-6" style="background-color: lightblue">
+
+                                <div class="card" style="width: 15rem;;">
+                                    <img class="card-img-top" src="../Image/Image1.jpg" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text">
+                                            <span class="text-info">Profile Information</span>
+                                            <br>
+                                            <br>
+                                            <span class="text-info">Name:</span>
+                                            <br>
+                                            <span class="text-info">Specialization:</span>
+                                            <br>
+                                            <span class="text-info">Contact Number:</span>
+                                            <br>
+                                            <span class="text-info">Schedule:</span>
+                                            <br>
+                                            <span class="text-info">Consultant Fee</span>
+
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <footer class="footer">
+                    <div class="container">
+                        <span class="text-muted">Copyright © 2019, All Rights Reserved</span>
+                    </div>
+                </footer>
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('#sidebarCollapse').on('click', function() {
+                            $('#sidebar').toggleClass('active');
+                            $(this).toggleClass('active');
+                        });
+                    });
+                </script>
+
+</body>
+
+</html>

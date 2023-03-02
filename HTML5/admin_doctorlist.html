@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="../Styles/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/Fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/background.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/modal.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../Image/Test.ico" />
+
+
+    <script src="../Codes/javascript/jquery-3.4.1.min.js"></script>
+    <script src="../Codes/javascript/popper.min.js"></script>
+    <script src="../Codes/javascript/bootstrap.min.js"></script>
+
+    <title>Doctor List</title>
+
+
+
+
+</head>
+
+<body id ="bg2">
+
+        <div class="wrapper">
+
+            <nav id="sidebar" style="background-image:url('../Image/5.jpg') ">
+                <div class="sidebar-header" style="padding-left: 60px;">
+                    <i class="far fa-hospital" style=" padding-left: 50px;"></i>
+                    <h3 style="padding-left: 20px;">Skyre</h3>
+                    <h3>Hospital</h3>
+                </div>
+
+                <ul class="list-group">
+                    <li class="active">
+                        
+                        <a href="admin_dashboard.html">
+                            <i class="fas fa-home-lg-alt"></i>
+                            <span> Dashboard</span>
+                        </a>
+
+                    </li>
+                    <li class="active">
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <i class="fas fa-hospital-user"></i>
+                                <span> Patient</span>
+                        </a>
+                        
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="admin_addpatient.html" style="background-color: darkcyan">Add Patient</a>
+                            </li>
+                            <li>
+                                <a href="admin_patientlist.html" style="background-color: teal">Patient List</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="active">
+
+                        <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle" >
+                            <i class= "fas fa-user-md"></i>
+                            <span> Doctor</span>
+                        </a>
+
+                        <ul class="collapse list-unstyled" id="pageSubmenu2">
+                            <li>
+                                <a href="admin_adddoctor.html" style="background-color: teal">Add Doctor</a>
+                            </li>
+                            <li>
+                                <a href="admin_doctorlist.html" style="background-color: teal">Doctor List</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </nav>
+
+            <!-- Navigation Section -->
+
+            <div id="content">
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+
+                       
+
+                        <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="fas fa-align-justify"></i>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="nav navbar-nav ml-auto">
+
+                                <li class="nav-item">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+                                            <i class="fas fa-user-shield"></i>
+                                            <span>Admin</span>
+                                                
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-right">
+                                                <a class="dropdown-item" href="index.html" onclick="return confirm('Are you sure to logout?');">Logout</a>
+                                                
+                                            </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div>
+
+                </div>
+                    <!-- Main Section -->
+                    <br>
+
+                    <div class="card-header bg-light text-black-50">
+                            <span class="text-info">Doctor List</span>
+                           
+                        </div>
+
+                        <div class="form-group">
+                                <div class="form-row">
+                                     
+                                        <div class="col-sm-8" style="padding-top: 15px">
+                        
+                                                <div class="input-group" style="padding-left: 20px">
+                        
+                                                    <label class="col-form-label" style="padding-right: 20px">Show:</label>
+                        
+                                                    <select name="">
+                                                        
+                                                        <option value="ten">10</option>
+                                                        <option value="twenty">20</option>
+                                                        <option value="thirty">30</option>
+                                                        <option value="fourty">40</option>
+                                                        <option value="fifty">50</option>
+                                                    </select>
+                        
+                                                </div>    
+                        
+                                        </div>
+                        
+                                        <div class="col-sm" style="padding-top: 15px">
+                        
+                                                <div class="input-group" style="padding-left: 66px">
+                        
+                                                    <label class="col-form-label" style="padding-right: 30px">Search</label>
+                                                    <input type="text" name="" autocomplete="off" style="padding-right: 30px">
+                        
+                                                </div>    
+                        
+                                            </div>
+                        
+                                        <div>
+                        
+                        
+                                            
+                                    </div>
+                        
+                        
+                                </div>
+                        
+                            </div>
+                        
+                         
+                       
+                    
+                <footer class="footer">
+                        <div class="container">
+                          <span class="text-muted">Copyright © 2019, All Rights Reserved</span>
+                        </div>
+                      </footer>
+
+
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#sidebarCollapse').on('click', function() {
+                    $('#sidebar').toggleClass('active');
+                    $(this).toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+
+</html>

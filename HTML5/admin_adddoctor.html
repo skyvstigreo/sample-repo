@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="../Styles/Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/Fontawesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/background.css">
+    <link rel="stylesheet" type="text/css" href="../Styles/modal.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../Image/Test.ico" />
+
+    <script src="../Codes/javascript/jquery-3.4.1.min.js"></script>
+    <script src="../Codes/javascript/popper.min.js"></script>
+    <script src="../Codes/javascript/bootstrap.min.js"></script>
+
+    <title>Doctor Registration</title>
+
+</head>
+
+<body id="bg2">
+
+    <div class="wrapper">
+
+        <nav id="sidebar" style="background-image:url('../Image/5.jpg') ">
+            <div class="sidebar-header" style="padding-left: 60px;">
+                <i class="far fa-hospital" style=" padding-left: 50px;"></i>
+                <h3 style="padding-left: 20px;">Skyre</h3>
+                <h3>Hospital</h3>
+            </div>
+
+            <ul class="list-group">
+                <li class="active">
+
+                    <a href="admin_dashboard.html">
+                        <i class="fas fa-home-lg-alt"></i>
+                        <span> Dashboard</span>
+                    </a>
+
+                </li>
+                <li class="active">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-hospital-user"></i>
+                        <span> Patient</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="admin_addpatient.html" style="background-color: darkcyan">Add Patient</a>
+                        </li>
+                        <li>
+                            <a href="admin_patientlist.html" style="background-color: teal">Patient List</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="active">
+
+                    <a href="#pageSubmenu2" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-user-md"></i>
+                        <span> Doctor</span>
+                    </a>
+
+                    <ul class="collapse list-unstyled" id="pageSubmenu2">
+                        <li>
+                            <a href="admin_adddoctor.html" style="background-color: teal">Add Doctor</a>
+                        </li>
+                        <li>
+                            <a href="admin_doctorlist.html" style="background-color: teal">Doctor List</a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+
+        <!-- Navigation Section -->
+
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-user-shield"></i>
+                                    <span>Admin</span>
+
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right">
+                                    <a class="dropdown-item" href="index.html" onclick="return confirm('Are you sure to logout?');">Logout</a>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div>
+
+            </div>
+            <!-- Main Section -->
+            <br>
+            <div class="col-md-12">
+                <div class="panel panel-flat">
+
+                    <div class="panel-body">
+                        <div>
+                            <ul class="nav nav-tabs">
+                                <li class="active">Doctor Details</li>
+
+                            </ul>
+
+                            <div class="tab-content">
+                                <br/>
+                                <div class="tab-pane active" id="">
+                                    <br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" method="post">
+
+                        <div class="form-group">
+
+                            <div class="form-row">
+
+                                <div class="col-sm">
+                                    <label for="pr_regnum">Registration Number</label>
+                                    <div class="input-group-prepend">
+                                        <input type="number" name="" class="form-control" id="" placeholder="" value="" readonly/>
+                                        <div class="input-group-text"> <i class="fas fa-mailbox"></i></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <label for="pr_status">Specialization</label>
+                                    <div class="input-group-prepend">
+                                        <select class="form-control">
+                                            <option value="">Select Specialization</option>
+                                            <option value="">Cardiologist</option>
+                                            <option value="">Dermatologist</option>
+                                            <option value="">Family Physician</option>
+                                            <option value="">Internal Medicine Physician</option>
+                                            <option value="">Obstretrician/Gynecologist</option>
+                                            <option value="">Ophthalmologist</option>
+                                            <option value="">Psychiatrist</option>
+                                            <option value="">Surgeon</option>
+                                            <option></option>
+                                        </select>
+                                        <div class="input-group-text"> <i class="fa fa-user"></i></div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-sm">
+                                    <label for="pr_image">Upload Photo</label>
+                                    <input id="" type="hidden" value="" name="]" />
+                                    <input name="]" id="" type="file" />
+                                    <div class="text-danger" id="" style="display:none">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <br>
+
+                        <div class="form-row">
+
+                            <div class="col-sm-4">
+                                <label for="pr_status">Department</label>
+                                <div class="input-group-prepend">
+                                    <select class="form-control">
+                                        <option value="">Select Department</option>
+                                        <option></option>
+                                        <option value="">Cardiology</option>
+                                        <option value="">Neurology</option>
+                                    </select>
+                                    <div class="input-group-text"> <i class="fas fa-building"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="pr_fname">Doctor Name</label>
+                                <div class="input-group-prepend">
+                                    <input type="text" name="" class="form-control" id="" placeholder="Doctor Name" value="" minlength="1" />
+                                    <div class="input-group-text"> <i class="fa fa-user"></i></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="pr_mname">Contact Number</label>
+                                <div class="input-group-prepend">
+                                    <input type="text" name="" class="form-control" id="" placeholder="" value="" minlength="11" maxlength="11" />
+                                    <div class="input-group-text"> <i class="fas fa-phone"></i></div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <br>
+
+                        <div class="form-row">
+
+                            <div class="col-sm-4">
+                                <label for="pr_status">Schedule</label>
+                                <div class="input-group-prepend">
+                                    <select class="form-control">
+                                        <option value="">Select Schedule</option>
+                                        <option value="">7:00 AM - 9:00 AM</option>
+                                        <option value="">9:00 AM - 11:00 PM</option>
+                                        <option value="">1:00 PM - 3:00 PM</option>
+                                        <option value="">3:00 PM - 6:00 PM</option>
+
+                                    </select>
+                                    <div class="input-group-text"> <i class="fa fa-clipboard-list"></i></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <label for="pr_dob">Consultant Fee</label>
+                                <div class="input-group-prepend">
+                                    <input type="text" name="pr_dob" class="form-control" id="pr_dob" placeholder="" value="" />
+                                    <div class="input-group-text"> <i class="fa fa-money-check-alt"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <br>
+                <div class="form-group">
+                    <div class="form-row">
+
+                        <div class="col-sm" style="text-align: center">
+                            <button class="btn btn-primary rounded"><i class="fas fa-file"></i> Register</button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                </form>
+
+                <footer class="footer">
+                    <div class="container">
+                        <span class="text-muted">Copyright © 2019, All Rights Reserved</span>
+                    </div>
+                </footer>
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('#sidebarCollapse').on('click', function() {
+                            $('#sidebar').toggleClass('active');
+                            $(this).toggleClass('active');
+                        });
+                    });
+                </script>
+
+</body>
+
+</html>
